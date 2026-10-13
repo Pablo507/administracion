@@ -13,6 +13,7 @@ export type Property = {
   bathrooms: number;
   area: number;
   image: string;
+  images?: string[];
   description: string;
   featured?: boolean;
 };
@@ -29,8 +30,13 @@ export const properties: Property[] = [
     bedrooms: 2,
     bathrooms: 1,
     area: 75,
-    image:
-      'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80',
+    image: '/propiedades/apartamento-pocitos-2dorm/01.jpg',
+    images: [
+      '/propiedades/apartamento-pocitos-2dorm/01.jpg',
+      '/propiedades/apartamento-pocitos-2dorm/02.jpg',
+      '/propiedades/apartamento-pocitos-2dorm/03.jpg',
+      '/propiedades/apartamento-pocitos-2dorm/04.jpg',
+    ],
     description:
       'Luminoso apartamento a 2 cuadras de la Rambla. Living comedor amplio, cocina equipada, dos dormitorios con placard y balcón. Edificio con portería.',
     featured: true,

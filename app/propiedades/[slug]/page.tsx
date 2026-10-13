@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import PropertyGallery from '@/components/PropertyGallery';
 import { properties, formatPrice } from '@/lib/properties';
 
 type Params = { slug: string };
@@ -57,9 +58,9 @@ export default async function PropertyPage({
         </div>
 
         <section className="container-x pb-16">
-          <div
-            className="aspect-[16/9] bg-cover bg-center bg-slate-border rounded mb-10"
-            style={{ backgroundImage: `url('${property.image}')` }}
+          <PropertyGallery
+            images={property.images ?? [property.image]}
+            title={property.title}
           />
 
           <div className="grid lg:grid-cols-[2fr_1fr] gap-16">
@@ -140,4 +141,3 @@ export default async function PropertyPage({
     </>
   );
 }
-

@@ -10,6 +10,7 @@ const links = [
   { href: '/#faq', label: 'Preguntas' },
   { href: '/#contacto', label: 'Contacto' },
 ];
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -29,15 +30,13 @@ export default function Header() {
     >
       <div className="container-x flex items-center justify-between h-20">
         <a
-          href="#top"
-          className={`font-semibold tracking-tight text-lg ${
-            scrolled ? 'text-white' : 'text-white'
-          }`}
+          href="/#top"
+          className="font-semibold tracking-tight text-lg text-white shrink-0"
         >
           Admin<span className="text-gold">Montevideo</span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8 ml-8">
           {links.map((l) => (
             <a
               key={l.href}
@@ -50,7 +49,7 @@ export default function Header() {
         </nav>
 
         <a
-          href="#contacto"
+          href="/#contacto"
           className="hidden md:inline-flex items-center bg-gold text-white text-sm px-5 py-2.5 rounded hover:bg-gold-light transition-colors"
         >
           Solicitar presupuesto
@@ -85,7 +84,7 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#contacto"
+              href="/#contacto"
               onClick={() => setOpen(false)}
               className="bg-gold text-white text-sm px-5 py-2.5 rounded text-center"
             >
@@ -97,4 +96,3 @@ export default function Header() {
     </header>
   );
 }
-
