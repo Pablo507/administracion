@@ -24,6 +24,16 @@ export const metadata: Metadata = {
     title: 'Administración de Propiedades en Montevideo',
     description:
       'Nos ocupamos de la cobranza, los impuestos, el mantenimiento y los inquilinos. Vos solo recibís el alquiler.',
+    url: 'https://administracion-coral.vercel.app', // URL oficial de tu demo
+    siteName: 'Administración de Propiedades',
+    images: [
+      {
+        url: '/portada-demo.jpg', // La imagen que guardaste en la carpeta public
+        width: 1200,
+        height: 630,
+        alt: 'Demo de Administración de Propiedades en Montevideo',
+      },
+    ],
     type: 'website',
     locale: 'es_UY',
   },
